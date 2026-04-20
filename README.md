@@ -61,19 +61,23 @@ The primary goal of this project was to master **Unity Netcode for GameObjects (
 * **Position Sync:** Uses `NetworkTransform` with interpolation to ensure enemy movement appears smooth even with minor latency.
 
 
-##  How to Run
+## Important Note
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/Kirit-Jain/Spectral-Shift.git
-    ```
-2.  **Open in Unity:** Version **2022.3** or later is recommended.
-3.  **Build the Project:**
-    * Go to `File > Build Settings`.
-    * Select **Windows/Mac/Linux** and click **Build**.
-4.  **Run Multiplayer:**
-    * **Host:** Run the Unity Editor (or one instance of the build) and click **"Start Host"**. Copy the Join Code printed in the Console/UI.
-    * **Client:** Run the standalone executable, paste the Join Code into the input field, and click **"Join"**.
+Due to a Git accident, the original scene files, prefabs, and full project assets were lost.  
+
+This repository contains the **recovered C# gameplay scripts** from the final build (including Player, GameMechanics, NetworkScripts, etc.).
+
+The scripts demonstrate core systems such as:
+- Multiplayer networking
+- Player controller & mechanics
+- Game systems
+- UI & other features
+
+### Demo / Proof of Concept
+- **Gameplay Video**: [Add your video link here]
+- **Download Final Build**: [Add link to your built .exe or zip]
+
+You can view and review the code directly. The full playable version is available via the links above.
 
 
 
