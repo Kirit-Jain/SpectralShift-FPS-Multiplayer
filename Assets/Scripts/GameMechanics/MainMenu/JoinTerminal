@@ -1,0 +1,52 @@
+using TMPro;
+using UnityEngine;
+
+public class JoinTerminal : MonoBehaviour, IInteractable
+{
+	[SerializeField]
+	private RelayManager relayManager;
+
+	[SerializeField]
+	private TMP_InputField hiddenInputField;
+
+	[SerializeField]
+	private TextMeshProUGUI screenText;
+
+	private bool isTyping;
+
+	public string GetPrompt()
+	{
+		if (!isTyping)
+		{
+			return "Press [E] to Enter Code";
+		}
+		return "";
+	}
+
+	public void OnInteract()
+	{
+		isTyping = true;
+		hiddenInputField.gameObject.SetActive(value: true);
+		hiddenInputField.ActivateInputField();
+		screenText.text = "TYPE CODE...";
+	}
+
+	private void Update()
+	{
+		if (isTyping)
+		{
+			screenText.text = hiddenInputField.text;
+			if (hiddenInputField.text.Length == 6)
+			{
+				relayManager.JoinRelay(hiddenInputField.text);
+				isTyping = false;
+				hiddenInputField.gameObject.SetActive(value: false);
+			}
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				isTyping = false;
+				hiddenInputField.gameObject.SetActive(value: false);
+			}
+		}
+	}
+}

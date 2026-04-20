@@ -1,0 +1,41 @@
+# =====================================
+# Unity Standard Ignores
+# =====================================
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+.exebuild/
+exe build/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Large auto-generated files
+*.csproj
+*.sln
+Packages/packages-lock.json
+
+# Recovery folders
+_Recovery/
+.Recovery/
+
+# =====================================
+# Keep only what we need
+# =====================================
+# Ignore everything in Assets except Scripts folder
+Assets/*
+!Assets/Scripts/
+!Assets/Scripts/**
+
+# Optional: Keep these if you copied them
+!Packages/manifest.json
+!ProjectSettings/
